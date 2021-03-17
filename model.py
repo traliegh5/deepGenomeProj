@@ -143,7 +143,7 @@ def train(train_x, train_y, valid_x, valid_y):
           "dropouts": dropouts,
           "batch_size": batch_size
           }
-    #exp.log_parameters(params)
+    experiment.log_parameters(params)
     print(params)
 
     #filters1 = 32
