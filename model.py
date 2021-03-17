@@ -54,8 +54,8 @@ eval_cells = ['E065', 'E004', 'E066', 'E005', 'E012', 'E027', 'E053', 'E013', 'E
 train_eval_diff_cells = ['E096', 'E113', 'E084', 'E112', 'E071', 'E087'] # These are in eval but NOT in train
 
 # Load data
-train_data = np.load('data/train.npz')
-eval_data = np.load('data/eval.npz')
+train_data = np.load('./train.npz')
+eval_data = np.load('./eval.npz')
 
 def get_data():
     # Keys to npzfile of train & eval
