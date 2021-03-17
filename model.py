@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-#from comet_ml import Experiment # Must be imported before tensorflow for some reason
+from comet_ml import Experiment # Must be imported before tensorflow for some reason
 import tensorflow as tf
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models import Sequential
