@@ -211,21 +211,21 @@ def train(train_x, train_y, valid_x, valid_y):
         history = model.fit(train_x, train_y, epochs=num_epochs, batch_size=batch_size, validation_data=(valid_x, valid_y))
     #"""
     # Plot training and validation loss
-    plt.plot(np.arange(1,num_epochs+1,1),history.history['loss'])
-    plt.plot(np.arange(1,num_epochs+1,1),history.history['val_loss'])
-    plt.title('Model Loss')
-    #plt.title(params)
-    plt.ylabel('Loss')
-    plt.xlabel('Epoch')
-    plt.legend(['Train', 'Validation'], loc='best')
-    #plt.tight_layout()
-    #plt.show()
-    now = datetime.now()
-    time_id = now.strftime("%m.%d-%H%M%p")
-    print(time_id)
-    plt.savefig('graphs/%s.png' % time_id)
-    #"""
-    print(model.summary())
+#     plt.plot(np.arange(1,num_epochs+1,1),history.history['loss'])
+#     plt.plot(np.arange(1,num_epochs+1,1),history.history['val_loss'])
+#     plt.title('Model Loss')
+#     #plt.title(params)
+#     plt.ylabel('Loss')
+#     plt.xlabel('Epoch')
+#     plt.legend(['Train', 'Validation'], loc='best')
+#     #plt.tight_layout()
+#     #plt.show()
+#     now = datetime.now()
+#     time_id = now.strftime("%m.%d-%H%M%p")
+#     print(time_id)
+#     plt.savefig('graphs/%s.png' % time_id)
+#     #"""
+#     print(model.summary())
 
     # Save trained model afterwards
 
