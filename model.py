@@ -21,7 +21,7 @@ rcParams['axes.titlesize'] = size + 3
 
 ############ comet_ml portion ############
 
-exp = Experiment(
+experiment = Experiment(
   
    
   
