@@ -22,17 +22,11 @@ rcParams['axes.titlesize'] = size + 3
 ############ comet_ml portion ############
 
 exp = Experiment(
-    # Mine
-    api_key="WqRtWjJU3OT8bsCw8rqnonR21", # For anon1234. But says antibody
+  
+    api_key="WqRtWjJU3OT8bsCw8rqnonR21", 
     project_name="midterm",
     
-    workspace="anon1234",
-    auto_metric_logging=True,
-    auto_param_logging=True,
-    auto_histogram_weight_logging=True,
-    auto_histogram_gradient_logging=True,
-    auto_histogram_activation_logging=True,
-    display_summary=False
+   
 )
 
 # Create an experiment with your api key
