@@ -130,7 +130,7 @@ def train(train_x, train_y, valid_x, valid_y):
     # 
 
     # Maybe learning rate should be increased??
-    l_rate = 5e-4 # DeepChrome used 1e-3, but with normal SGD (I think? Unclear which kind of SGD)
+    l_rate = 1e-3 # DeepChrome used 1e-3, but with normal SGD (I think? Unclear which kind of SGD)
     # 1e-2 doesn't seem that great...
     # 5e-3 didn't help
     #  5e-4 better than 7.5e-4 better than 1e-3
