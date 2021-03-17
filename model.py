@@ -23,7 +23,7 @@ rcParams['axes.titlesize'] = size + 3
 
 exp = Experiment(
   
-    api_key=WqRtWjJU3OT8bsCw8rqnonR2l, 
+   
     project_name="midterm",
     
    
