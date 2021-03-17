@@ -20,13 +20,13 @@ rcParams['ytick.labelsize'] = size
 rcParams['axes.titlesize'] = size + 3
 
 ############ comet_ml portion ############
-"""
+
 exp = Experiment(
-    api_key="Tig1xygDevBpKU65KlLE345np", # Mine
-    #api_key="WqRtWjJU3OT8bsCw8rqnonR21", # For anon1234. But says antibody
+    # Mine
+    api_key="WqRtWjJU3OT8bsCw8rqnonR21", # For anon1234. But says antibody
     project_name="midterm",
-    workspace="bfoulon",
-    #workspace="anon1234",
+    
+    workspace="anon1234",
     auto_metric_logging=True,
     auto_param_logging=True,
     auto_histogram_weight_logging=True,
@@ -34,7 +34,7 @@ exp = Experiment(
     auto_histogram_activation_logging=True,
     display_summary=False
 )
-"""
+
 # Create an experiment with your api key
 #experiment = Experiment(
 #    api_key="Tig1xygDevBpKU65KlLE345np",
@@ -207,7 +207,8 @@ def train(train_x, train_y, valid_x, valid_y):
     #model.compile(loss='mean_squared_error', optimizer="adam", metrics=['accuracy'])
     model.compile(loss='mean_squared_error', optimizer=Adam(learning_rate=l_rate))
     #model.fit(train_x, train_y, epochs=num_epochs, batch_size=batch_size)
-    history = model.fit(train_x, train_y, epochs=num_epochs, batch_size=batch_size, validation_data=(valid_x, valid_y))
+    with experiment.train():
+        history = model.fit(train_x, train_y, epochs=num_epochs, batch_size=batch_size, validation_data=(valid_x, valid_y))
     #"""
     # Plot training and validation loss
     plt.plot(np.arange(1,num_epochs+1,1),history.history['loss'])
