@@ -269,8 +269,8 @@ def main():
 
     #model = train(train_x, train_y)
     model = train(X_train, y_train, X_valid, y_valid)
-#     pred_y_test = model.predict(Test_x)
-#     get_csv(Test_x, pred_y_test)
+    pred_y_test = model.predict(Test_x)
+    get_csv(Test_x, pred_y_test)
 
 if __name__ == '__main__':
     main()
