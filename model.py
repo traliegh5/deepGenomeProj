@@ -101,7 +101,7 @@ def train(train_x, train_y, valid_x, valid_y):
     dropouts = [0.5] # 0.5 is best so far. 0.1 did better on test data though. Will that bring test performance down though?
     #conv_filters = [50] # [20, 50, 100]
     # Having more than one convolution layer doesn't seem to help at all
-    conv_filters = [100] # 50 is best so far. Going to 75 didn't improve things that much
+    conv_filters = [25] # 50 is best so far. Going to 75 didn't improve things that much
     conv_kernels = [10] # [10, 5]
     pool_sizes = [5] # 5
     #hidden_layer_sizes = [1000]
