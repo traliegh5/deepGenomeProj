@@ -101,7 +101,7 @@ def train(train_x, train_y, valid_x, valid_y):
     dropouts = [0.5] # 0.5 is best so far. 0.1 did better on test data though. Will that bring test performance down though?
     #conv_filters = [50] # [20, 50, 100]
     # Having more than one convolution layer doesn't seem to help at all
-    conv_filters = [50] # 50 is best so far. Going to 75 didn't improve things that much
+    conv_filters = [100] # 50 is best so far. Going to 75 didn't improve things that much
     conv_kernels = [10] # [10, 5]
     pool_sizes = [5] # 5
     #hidden_layer_sizes = [1000]
@@ -109,7 +109,7 @@ def train(train_x, train_y, valid_x, valid_y):
     #hidden_layer_sizes = [500, 100]
     #hidden_layer_sizes = [800, 300]
     #hidden_layer_sizes = [625, 125]
-    hidden_layer_sizes = [64, 32]
+    hidden_layer_sizes = [128, 64]
     #hidden_layer_sizes = [1000, 200] # This seems to do a bit better than the [625,125] one. Worth it?
     #hidden_layer_sizes = [625, 375, 125] # 950 didn't improve things. Nor did adding extra layer
 
@@ -130,7 +130,7 @@ def train(train_x, train_y, valid_x, valid_y):
     # 
 
     # Maybe learning rate should be increased??
-    l_rate = 1e-3 # DeepChrome used 1e-3, but with normal SGD (I think? Unclear which kind of SGD)
+    l_rate = 5e-4 # DeepChrome used 1e-3, but with normal SGD (I think? Unclear which kind of SGD)
     # 1e-2 doesn't seem that great...
     # 5e-3 didn't help
     #  5e-4 better than 7.5e-4 better than 1e-3
