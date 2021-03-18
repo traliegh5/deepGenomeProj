@@ -97,7 +97,7 @@ def train(train_x, train_y, valid_x, valid_y):
     # 2) 
 
     # DeepChrome Parameters
-    batch_size = 100
+    batch_size = 500
     dropouts = [0.5] # 0.5 is best so far. 0.1 did better on test data though. Will that bring test performance down though?
     #conv_filters = [50] # [20, 50, 100]
     # Having more than one convolution layer doesn't seem to help at all
