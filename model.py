@@ -97,11 +97,11 @@ def train(train_x, train_y, valid_x, valid_y):
     # 2) 
 
     # DeepChrome Parameters
-    batch_size = 500
+    batch_size = 50
     dropouts = [0.5] # 0.5 is best so far. 0.1 did better on test data though. Will that bring test performance down though?
     #conv_filters = [50] # [20, 50, 100]
     # Having more than one convolution layer doesn't seem to help at all
-    conv_filters = [25] # 50 is best so far. Going to 75 didn't improve things that much
+    conv_filters = [50] # 50 is best so far. Going to 75 didn't improve things that much
     conv_kernels = [10] # [10, 5]
     pool_sizes = [5] # 5
     #hidden_layer_sizes = [1000]
@@ -134,7 +134,7 @@ def train(train_x, train_y, valid_x, valid_y):
     # 1e-2 doesn't seem that great...
     # 5e-3 didn't help
     #  5e-4 better than 7.5e-4 better than 1e-3
-    num_epochs = 20
+    num_epochs = 15
 
     params = {"conv_filters": conv_filters,
           "conv_kernels": conv_kernels,
@@ -194,9 +194,9 @@ def train(train_x, train_y, valid_x, valid_y):
 #     model.add(Dense(625,activation='relu'))
     model.add(Dropout(dropouts[0]))
     model.add(Flatten())
-#     model.add(Dense(hidden_layer_sizes[0], activation='relu'))
-#     #model.add(Dropout(dropouts[1]))
-#     model.add(Dense(hidden_layer_sizes[1], activation='relu'))
+    model.add(Dense(hidden_layer_sizes[0], activation='relu'))
+    #model.add(Dropout(dropouts[1]))
+    model.add(Dense(hidden_layer_sizes[1], activation='relu'))
     #model.add(Dense(hidden_layer_sizes[2], activation='relu'))
     model.add(Dense(1))
     #model.compile(loss='mean_squared_error', optimizer="adam", metrics=['accuracy'])
